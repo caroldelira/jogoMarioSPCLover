@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.corpo-jogo {
+  width: 100%;
+  height: 625px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: rgb(230,255,255);
+  background: linear-gradient(0deg, rgba(230,255,255,1) 0%, rgba(129,193,255,1) 100%);
+}
+
+@keyframes logo-pisca {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.logo {
+  width: 200px;
+  margin-top: 60px;
+  animation: logo-pisca .9s linear infinite;
+}
+
+.tela-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  background: rgb(230,255,255);
+  background: linear-gradient(0deg, rgba(230,255,255,1) 0%, rgba(129,193,255,1) 100%);
+}
+
+.nuvens {
+  z-index: 0;
+  height: 200px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 700px;
+
+  position: absolute;
+
+ animation: moveNuvem 30s infinite linear;
+}
+
+@keyframes moveNuvem {
+  from {
+    right: -1500px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+
+.cano {
+  bottom: 5px;
+  position: absolute;
+  width: 70px;
+  animation: moveCano 2s infinite linear;
+}
+
+@keyframes moveCano {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+} 
+
+.moita {
+  bottom: 5px;
+  position: absolute;
+  width: 100px;
+
+  animation: moveMoita 4s infinite linear;
+}
+
+@keyframes moveMoita {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 300%;
+  }
+} 
+
+.blocoroxo {
+  width: 100px;
+  bottom: 100px;
+  position: absolute;
+
+  animation: moveBloco 8s infinite linear;
+}
+
+@keyframes moveBloco {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 300%;
+  }
+}
+
+.chao {
+  width: 100%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.mario {
+  bottom: 5px;
+  position: absolute;
+  width: 150px;
+}
+
+.pulo {
+  animation: pulo 500ms infinite ease-in-out;
+}
+
+@keyframes pulo {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 150px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  70% {
+    bottom: 150px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+.baixa {
+  animation: baixa 1000ms infinite ease-in-out;
+}
+
+@keyframes baixa {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+
+.deuruim {
+  width: 300px;
+  margin: 190px 0 200px 540px;
+}
+
+.iniciar {
+  width: 480px;
+  margin-top: 50px;
+}
+
+.divBotao {
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+
+.botao {
+  width: 150px;
+  height: 50px;
+  background-color: #7D0945;
+  color: white;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 280px 0 250px 540px;
+}
+
+#botaoIniciar {
+  width: 200px;
+  height: 50px;
+  background-color: #7D0945;
+  color: white;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+.botao:hover {
+  background-color: #6F0B38;
+}
+
+#tempo {
+  font-size: 20px;
+  color: #6F0B38;
+  font-weight: bold;
+  font-family: monospace;
+  
+  margin-left: 1190px;
+}
